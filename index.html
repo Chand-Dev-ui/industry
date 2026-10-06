@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Industry</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #777777;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #04091e;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 1140px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #ffba00;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 14px 40px;
+  border: 1px solid #ffba00;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #04091e;
+  border-color: #04091e;
+}
+
+.top-bar {
+  background-color: #1f1f1f;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 10px 0;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-bar a {
+  margin-right: 18px;
+}
+
+.top-bar a:hover {
+  color: #ffba00;
+}
+
+.top-right a {
+  margin-right: 0;
+  margin-left: 25px;
+}
+
+.header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #04091e;
+  padding: 18px 0;
+}
+
+.logo span {
+  color: #ffba00;
+  margin-right: 5px;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li {
+  position: relative;
+  margin-left: 26px;
+}
+
+.menu a {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #04091e;
+  padding: 25px 0;
+}
+
+.menu a:hover {
+  color: #ffba00;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 170px;
+  background-color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown a {
+  padding: 8px 20px;
+}
+
+.menu li:hover .dropdown {
+  display: block;
+}
+
+.hero {
+  background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)), url("https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1920&q=70");
+  background-color: #1b2233;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  text-align: center;
+  padding: 150px 0;
+}
+
+.hero h6 {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  color: #ffffff;
+  font-size: 48px;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  width: 620px;
+  max-width: 100%;
+  margin: 0 auto 28px auto;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.services {
+  padding: 120px 0;
+}
+
+.services .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.service-box {
+  width: 31%;
+  text-align: center;
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px auto;
+  border: 1px solid #cccccc;
+  border-radius: 12px;
+  color: #aaaaaa;
+  font-size: 24px;
+  line-height: 58px;
+}
+
+.service-box:hover .service-icon {
+  border-color: #ffba00;
+  color: #ffba00;
+}
+
+.service-box h4 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.service-box p {
+  font-size: 12px;
+  color: #999999;
+}
+
+.quote-section {
+  background-color: #f9f9ff;
+  padding: 100px 0;
+}
+
+.quote-section .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quote-text {
+  width: 62%;
+}
+
+.quote-text h6 {
+  color: #ffba00;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.quote-text h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.quote-text h5 {
+  font-size: 12px;
+  font-weight: 500;
+  color: #777777;
+  margin-bottom: 10px;
+}
+
+.quote-text p {
+  font-size: 12px;
+  color: #999999;
+  margin-bottom: 28px;
+}
+
+.quote-form {
+  width: 30%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.85), rgba(4, 9, 30, 0.85)), url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=60");
+  background-color: #04091e;
+  background-size: cover;
+  padding: 25px;
+}
+
+.quote-form h4 {
+  color: #ffffff;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 8px 10px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 11px;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+.quote-form select option {
+  color: #04091e;
+}
+
+.quote-form textarea {
+  height: 80px;
+}
+
+.quote-form input::placeholder,
+.quote-form textarea::placeholder {
+  color: #ffffff;
+}
+
+.quote-form input:focus,
+.quote-form select:focus,
+.quote-form textarea:focus {
+  border-color: #ffba00;
+  outline: none;
+}
+
+.quote-form .button {
+  width: 100%;
+  text-align: center;
+}
+
+.title-box {
+  text-align: center;
+  width: 600px;
+  max-width: 100%;
+  margin: 0 auto 50px auto;
+}
+
+.title-box h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.title-box p {
+  font-size: 12px;
+  color: #999999;
+}
+
+.sectors {
+  padding: 120px 0;
+}
+
+.sector-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sector-box {
+  width: 31%;
+}
+
+.sector-box img {
+  display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  background-color: #2b3a4a;
+  margin-bottom: 14px;
+}
+
+.sector-box h4 {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.sector-box h4:hover {
+  color: #ffba00;
+}
+
+.sector-box p {
+  font-size: 12px;
+  color: #999999;
+}
+
+.counter {
+  background-image: linear-gradient(rgba(4, 9, 30, 0.55), rgba(4, 9, 30, 0.55)), url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=70");
+  background-color: #2a303c;
+  background-size: cover;
+  background-position: center;
+  padding: 120px 0;
+  color: #ffffff;
+}
+
+.counter .container {
+  display: flex;
+  justify-content: center;
+}
+
+.counter-box {
+  width: 25%;
+  text-align: center;
+}
+
+.counter-ring {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 12px auto;
+  border: 1px solid #ffba00;
+  border-radius: 50%;
+  padding: 26px;
+}
+
+.counter-number {
+  width: 86px;
+  height: 86px;
+  background-color: #ffba00;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 86px;
+}
+
+.counter-box p {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.projects {
+  padding: 120px 0;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gallery-item {
+  height: 360px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  background-color: #2b3a4a;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-item:hover img {
+  opacity: 0.7;
+}
+
+.big {
+  width: 66%;
+}
+
+.small {
+  width: 31%;
+}
+
+.half {
+  width: 48.5%;
+}
+
+.feedback {
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&w=1920&q=70");
+  background-color: #2a1a12;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+}
+
+.feedback .title-box h2,
+.feedback .title-box p {
+  color: #ffffff;
+}
+
+.feedback-box {
+  display: flex;
+}
+
+.feedback-box img {
+  width: 55%;
+  height: 300px;
+  object-fit: cover;
+  background-color: #c9970a;
+}
+
+.feedback-text {
+  width: 45%;
+  padding: 10px 0 0 15px;
+}
+
+.feedback-text h4 {
+  color: #ffffff;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.stars {
+  color: #ffba00;
+  margin-left: 8px;
+}
+
+.feedback-text p {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.dots {
+  margin-top: 18px;
+}
+
+.dots span {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 5px;
+  background-color: #888888;
+  border-radius: 50%;
+}
+
+.dots .active {
+  background-color: #ffba00;
+}
+
+.blog {
+  padding: 120px 0;
+}
+
+.blog-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.blog-box {
+  width: 31%;
+}
+
+.blog-box img {
+  display: block;
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  background-color: #2b3a4a;
+}
+
+.blog-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #999999;
+  padding: 10px 0;
+  margin-bottom: 14px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.blog-box h4 {
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.blog-box h4 span {
+  color: #ffba00;
+}
+
+.blog-box h4:hover {
+  color: #ffba00;
+}
+
+.blog-box p {
+  font-size: 12px;
+  color: #999999;
+}
+
+.footer {
+  background-color: #04091e;
+  color: #777777;
+  padding: 100px 0;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-about {
+  width: 40%;
+}
+
+.footer-news {
+  width: 40%;
+}
+
+.footer-follow {
+  width: 15%;
+}
+
+.footer h4 {
+  color: #ffffff;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.footer p {
+  font-size: 11px;
+}
+
+.copyright {
+  margin-top: 15px;
+}
+
+.copyright a {
+  color: #ffba00;
+}
+
+.news-form {
+  display: flex;
+  margin-top: 10px;
+}
+
+.news-form input {
+  width: 75%;
+  padding: 8px 10px;
+  border: none;
+  font-size: 11px;
+}
+
+.news-form button {
+  width: 36px;
+  background-color: #ffba00;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.news-form button:hover {
+  background-color: #ffffff;
+  color: #ffba00;
+}
+
+.social a {
+  color: #ffffff;
+  font-size: 12px;
+  margin-right: 14px;
+}
+
+.social a:hover {
+  color: #ffba00;
+}
+
+@media (max-width: 1199px) {
+  .container {
+    width: 960px;
+  }
+  .gallery-item {
+    height: 300px;
+  }
+}
+
+@media (max-width: 991px) {
+  .header .container {
+    flex-direction: column;
+  }
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+  .menu li {
+    margin: 0 12px;
+  }
+  .menu a {
+    padding: 8px 0;
+  }
+  .dropdown {
+    display: none !important;
+  }
+  .hero {
+    padding: 100px 0;
+  }
+  .hero h1 {
+    font-size: 40px;
+  }
+  .services,
+  .sectors,
+  .projects,
+  .blog {
+    padding: 80px 0;
+  }
+  .quote-section .container {
+    flex-direction: column;
+  }
+  .quote-text {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .quote-form {
+    width: 60%;
+  }
+  .counter {
+    padding: 80px 0;
+  }
+  .counter .container {
+    flex-wrap: wrap;
+  }
+  .counter-box {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+  .feedback-box {
+    flex-direction: column;
+  }
+  .feedback-box img {
+    width: 100%;
+  }
+  .feedback-text {
+    width: 100%;
+    padding: 20px 0 0 0;
+  }
+  .blog-list {
+    flex-wrap: wrap;
+  }
+  .blog-box {
+    width: 48%;
+    margin-bottom: 30px;
+  }
+  .footer .container {
+    flex-wrap: wrap;
+  }
+  .footer-about,
+  .footer-news {
+    width: 48%;
+  }
+  .footer-follow {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .top-bar .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .top-right a {
+    margin: 0 8px;
+  }
+  .hero h1 {
+    font-size: 32px;
+  }
+  .services .container {
+    flex-direction: column;
+  }
+  .service-box {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .quote-form {
+    width: 100%;
+  }
+  .sector-list {
+    flex-direction: column;
+  }
+  .sector-box {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .big,
+  .small,
+  .half {
+    width: 100%;
+  }
+  .gallery-item {
+    height: 240px;
+  }
+  .blog-list {
+    flex-direction: column;
+  }
+  .blog-box {
+    width: 100%;
+  }
+  .footer-about,
+  .footer-news {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero {
+    padding: 70px 0;
+  }
+  .hero h1 {
+    font-size: 26px;
+  }
+  .quote-text h2 {
+    font-size: 24px;
+  }
+  .title-box h2 {
+    font-size: 20px;
+  }
+  .counter-box {
+    width: 100%;
+  }
+  .feedback-box img {
+    height: 220px;
+  }
+}
+
+@media (max-width: 359px) {
+  .logo {
+    font-size: 17px;
+  }
+  .hero h1 {
+    font-size: 22px;
+  }
+  .button {
+    padding: 12px 24px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="container">
+    <div class="top-left">
+      <a href="#">f</a>
+      <a href="#">t</a>
+      <a href="#">ig</a>
+      <a href="#">in</a>
+    </div>
+    <div class="top-right">
+      <a href="#">+(123) 4568 905</a>
+      <a href="#">support@colorlib.com</a>
+    </div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container">
+    <a href="#" class="logo"><span>||</span>Industry</a>
+    <ul class="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#services">About</a></li>
+      <li><a href="#sectors">Service</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li>
+        <a href="#blog">Blog &#9662;</a>
+        <ul class="dropdown">
+          <li><a href="#blog">Blog Home</a></li>
+          <li><a href="#blog">Blog Single</a></li>
+        </ul>
+      </li>
+      <li><a href="#quote">Contact</a></li>
+      <li><a href="#">Shortcode</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h6>Don't look further, here is the city</h6>
+    <h1>We're Industrial solution</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, sed do eiusmod tempor incididunt.</p>
+    <a href="#quote" class="button">Get Started</a>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="service-box">
+      <div class="service-icon">&#9874;</div>
+      <h4>Maintenance</h4>
+      <p>Inappropriate behavior is often laughed off as boys will be boys, women face higher risk during their workplace. Thank you.</p>
+    </div>
+    <div class="service-box">
+      <div class="service-icon">&#9998;</div>
+      <h4>Residential Service</h4>
+      <p>Inappropriate behavior is often laughed off as boys will be boys, women face higher risk during their workplace. Thank you.</p>
+    </div>
+    <div class="service-box">
+      <div class="service-icon">&#8962;</div>
+      <h4>Commercial Service</h4>
+      <p>Inappropriate behavior is often laughed off as boys will be boys, women face higher risk during their workplace. Thank you.</p>
+    </div>
+  </div>
+</section>
+
+<section class="quote-section" id="quote">
+  <div class="container">
+    <div class="quote-text">
+      <h6>We are here to listen from you deliver exellence</h6>
+      <h2>We've made a life that will change you</h2>
+      <h5>We are here to listen from you deliver</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <a href="#" class="button">Get Started Now</a>
+    </div>
+    <form class="quote-form" action="#" method="post">
+      <h4>Request a Quote</h4>
+      <select>
+        <option>Select Service</option>
+        <option>Automotive Engineering</option>
+        <option>Construction &amp; Engineering</option>
+        <option>Industrial Engineering</option>
+      </select>
+      <input type="text" placeholder="Name">
+      <input type="tel" placeholder="Phone Number">
+      <input type="email" placeholder="Email Address">
+      <textarea placeholder="Message"></textarea>
+      <button type="submit" class="button">Request Free Quote</button>
+    </form>
+  </div>
+</section>
+
+<section class="sectors" id="sectors">
+  <div class="container">
+    <div class="title-box">
+      <h2>Our Capturing Market Sectors</h2>
+      <p>Who are in extremely met with sanctimony system.</p>
+    </div>
+    <div class="sector-list">
+      <div class="sector-box">
+        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=700&q=70" alt="Automotive Engineering">
+        <h4>Automotive Engineering</h4>
+        <p>Inappropriate behavior is often laughed off as boys will be boys, women face higher risk during their workplace.</p>
+      </div>
+      <div class="sector-box">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=70" alt="Construction and Engineering">
+        <h4>Contruction &amp; Engineering</h4>
+        <p>Inappropriate behavior is often laughed off as boys will be boys, women face higher risk during their workplace.</p>
+      </div>
+      <div class="sector-box">
+        <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=700&q=70" alt="Industrial Engineering">
+        <h4>Industrial Engineering</h4>
+        <p>Inappropriate behavior is often laughed off as boys will be boys, women face higher risk during their workplace.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="counter">
+  <div class="container">
+    <div class="counter-box">
+      <div class="counter-ring"><div class="counter-number">2k+</div></div>
+      <p>Projects Completed</p>
+    </div>
+    <div class="counter-box">
+      <div class="counter-ring"><div class="counter-number">5.5k</div></div>
+      <p>Total Employees</p>
+    </div>
+    <div class="counter-box">
+      <div class="counter-ring"><div class="counter-number">959</div></div>
+      <p>Happy Clients</p>
+    </div>
+    <div class="counter-box">
+      <div class="counter-ring"><div class="counter-number">367</div></div>
+      <p>Tickets Submitted</p>
+    </div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="container">
+    <div class="title-box">
+      <h2>Latest Finished Projects</h2>
+      <p>Who are in extremely met with sanctimony system.</p>
+    </div>
+    <div class="gallery">
+      <div class="gallery-item big">
+        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1000&q=70" alt="Project 1">
+      </div>
+      <div class="gallery-item small">
+        <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=600&q=70" alt="Project 2">
+      </div>
+      <div class="gallery-item half">
+        <img src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&w=800&q=70" alt="Project 3">
+      </div>
+      <div class="gallery-item half">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=70" alt="Project 4">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="feedback">
+  <div class="container">
+    <div class="title-box">
+      <h2>Enjoy our Client's Feedback</h2>
+      <p>Who are in extremely met with sanctimony system.</p>
+    </div>
+    <div class="feedback-box">
+      <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=70" alt="Client">
+      <div class="feedback-text">
+        <h4>Fannie Rowe <span class="stars">&#9733;&#9733;&#9733;&#9734;&#9734;</span></h4>
+        <p>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.</p>
+        <div class="dots">
+          <span class="active"></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blog" id="blog">
+  <div class="container">
+    <div class="title-box">
+      <h2>Latest Posts From Our Blog</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="blog-list">
+      <div class="blog-box">
+        <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=700&q=70" alt="Blog 1">
+        <div class="blog-info">
+          <span>Mark Wiens</span>
+          <span>1 Min Read &nbsp; 06 &nbsp; 02</span>
+        </div>
+        <h4>Portable Fashion for young <span>women</span></h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+      </div>
+      <div class="blog-box">
+        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=700&q=70" alt="Blog 2">
+        <div class="blog-info">
+          <span>Mark Wiens</span>
+          <span>1 Min Read &nbsp; 06 &nbsp; 02</span>
+        </div>
+        <h4>Portable Fashion for young <span>women</span></h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+      </div>
+      <div class="blog-box">
+        <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=700&q=70" alt="Blog 3">
+        <div class="blog-info">
+          <span>Mark Wiens</span>
+          <span>1 Min Read &nbsp; 06 &nbsp; 02</span>
+        </div>
+        <h4>Portable Fashion for young <span>women</span></h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-about">
+      <h4>About Us</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
+      <p class="copyright">Copyright &copy;2026 All rights reserved | This template is made with <a href="#">&#9829;</a> by <a href="#">Rohaan Chand</a></p>
+    </div>
+    <div class="footer-news">
+      <h4>Newsletter</h4>
+      <p>Stay updated with our latest trends</p>
+      <form class="news-form" action="#" method="post">
+        <input type="email" placeholder="Enter Email">
+        <button type="submit">&rarr;</button>
+      </form>
+    </div>
+    <div class="footer-follow">
+      <h4>Follow Us</h4>
+      <p>Let us be social</p>
+      <div class="social">
+        <a href="#">f</a>
+        <a href="#">t</a>
+        <a href="#">ig</a>
+        <a href="#">in</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
